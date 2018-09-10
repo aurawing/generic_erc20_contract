@@ -1,0 +1,1 @@
+# generic_erc20_contract
