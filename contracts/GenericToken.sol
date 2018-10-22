@@ -235,6 +235,10 @@ contract GenericToken {
         emit Approval(msg.sender, _spender, _value);
         return true;
     }
+    
+    function allowance(address _owner, address _spender) public view returns (uint256) {
+        return allowed[_owner][_spender];
+    }
 
     function increaseApproval(address _spender, uint256 _addedValue) public returns (bool) {
         uint256 value_ = allowed[msg.sender][_spender].add(_addedValue);
